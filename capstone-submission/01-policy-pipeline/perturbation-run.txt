@@ -1,0 +1,15 @@
+== A. UNPERTURBED - well-formed response
+   result type : PolicyExtraction
+   API calls   : 1
+   record      : PolicyExtraction(policy_id='POL-2025-001', policy_type='auto', premium_amount=1500.0, deductible=500.0, coverage_limit=100000.0, endorsements=[Endorsement(name='Roadside', limit=None)], exclusions=['Racing'], premium_components=None, confidence={'policy_type': 0.95, 'premium_amount': 0.95, 'deductible': 0.95, 'coverage_limit': 0.9, 'endorsements': 0.9, 'exclusions': 0.9}, retry_count=0, final_attempt_index=0, validation_history=[])
+
+== B. PERTURBED (recoverable) - premium_amount=-1500.0, then corrected
+   result type : PolicyExtraction
+   API calls   : 2
+   record      : PolicyExtraction(policy_id='POL-2025-001', policy_type='auto', premium_amount=1500.0, deductible=500.0, coverage_limit=100000.0, endorsements=[Endorsement(name='Roadside', limit=None)], exclusions=['Racing'], premium_components=None, confidence={'policy_type': 0.95, 'premium_amount': 0.95, 'deductible': 0.95, 'coverage_limit': 0.9, 'endorsements': 0.9, 'exclusions': 0.9}, retry_count=1, final_attempt_index=1, validation_history=[ValidationError(field='premium_amount', observed_value='-1500.0', category='format', detected_pattern='negative_premium', message='premium_amount is -1500.0, which is negative. Premium amounts must be a positive number in USD. Re-read the document and extract the correct positive value.')])
+
+== C. PERTURBED (futile) - required field endorsements blanked to null
+   result type : RetryFutileEscalation
+   API calls   : 1
+   record      : RetryFutileEscalation(policy_id='POL-2025-001', field='endorsements', category='missing_source', detected_pattern='endorsements_absent', reason="Field 'endorsements' returned null — the source document does not contain this information. Retry is futile; escalate to human review.")
+

@@ -1,0 +1,3 @@
+$ ruff check policy_extractor/ tests/
+All checks passed!
+

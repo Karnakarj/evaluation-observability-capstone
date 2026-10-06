@@ -1,0 +1,7 @@
+# First run with pyproject.toml's configured Python 3.11 target under the Python 3.13 workspace:
+.venv/lib/python3.13/site-packages/numpy/__init__.pyi:737: error: Type statement is only supported in Python 3.12 and greater  [syntax]
+Found 1 error in 1 file (errors prevented further checking)
+
+# Re-run targeting the interpreter actually in use:
+$ mypy --python-version 3.13 supply_chain_risk/
+Success: no issues found in 8 source files

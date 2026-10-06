@@ -1,0 +1,8 @@
+Python 3.13.0
+PRETTY_NAME="Debian GNU/Linux 12 (bookworm)"
+Setup: one python3 -m venv .venv per project, pip install -e '.[dev]'
+
+Live run (System 1 only): ANTHROPIC_BASE_URL=https://claude.vocareum.com with the course-provided key (key not recorded here).
+The proxy rejects the alias "claude-haiku-4-5" (400: model not available) but accepts the dated id "claude-haiku-4-5-20251001" (same model).
+For the live pipeline run only, DEFAULT_EXTRACTOR_MODEL in batch.py, retry.py and reviewer.py was temporarily set to that dated id, then restored.
+Reviewer model "claude-sonnet-4-6" unchanged. Systems 2 and 3 ran fully offline.

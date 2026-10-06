@@ -1,0 +1,59 @@
+2026-09-24 17:15:15,708 INFO HTTP Request: POST https://claude.vocareum.com/v1/messages "HTTP/1.1 200 OK"
+2026-09-24 17:15:25,023 INFO HTTP Request: POST https://claude.vocareum.com/v1/messages "HTTP/1.1 200 OK"
+2026-09-24 17:15:25,025 INFO review_disagreement policy_id=POL-2025-001 fields=['coverage_limit', 'endorsements']
+2026-09-24 17:15:27,422 INFO HTTP Request: POST https://claude.vocareum.com/v1/messages "HTTP/1.1 200 OK"
+2026-09-24 17:15:34,261 INFO HTTP Request: POST https://claude.vocareum.com/v1/messages "HTTP/1.1 200 OK"
+2026-09-24 17:15:34,262 INFO review_disagreement policy_id=POL-2025-002 fields=['deductible', 'coverage_limit']
+2026-09-24 17:15:36,625 INFO HTTP Request: POST https://claude.vocareum.com/v1/messages "HTTP/1.1 200 OK"
+2026-09-24 17:15:42,960 INFO HTTP Request: POST https://claude.vocareum.com/v1/messages "HTTP/1.1 200 OK"
+2026-09-24 17:15:42,961 INFO review_disagreement policy_id=POL-2025-003 fields=['coverage_limit']
+2026-09-24 17:15:46,524 INFO HTTP Request: POST https://claude.vocareum.com/v1/messages "HTTP/1.1 200 OK"
+2026-09-24 17:15:54,217 INFO HTTP Request: POST https://claude.vocareum.com/v1/messages "HTTP/1.1 200 OK"
+2026-09-24 17:15:54,218 INFO review_disagreement policy_id=POL-2025-004 fields=['deductible', 'coverage_limit']
+2026-09-24 17:15:56,752 INFO HTTP Request: POST https://claude.vocareum.com/v1/messages "HTTP/1.1 200 OK"
+2026-09-24 17:16:04,890 INFO HTTP Request: POST https://claude.vocareum.com/v1/messages "HTTP/1.1 200 OK"
+2026-09-24 17:16:04,891 INFO review_disagreement policy_id=POL-2025-005 fields=['deductible', 'endorsements']
+2026-09-24 17:16:07,474 INFO HTTP Request: POST https://claude.vocareum.com/v1/messages "HTTP/1.1 200 OK"
+2026-09-24 17:16:12,949 INFO HTTP Request: POST https://claude.vocareum.com/v1/messages "HTTP/1.1 200 OK"
+2026-09-24 17:16:12,950 INFO review_disagreement policy_id=POL-2025-006 fields=['deductible']
+2026-09-24 17:16:16,507 INFO HTTP Request: POST https://claude.vocareum.com/v1/messages "HTTP/1.1 200 OK"
+2026-09-24 17:16:23,174 INFO HTTP Request: POST https://claude.vocareum.com/v1/messages "HTTP/1.1 200 OK"
+2026-09-24 17:16:23,175 INFO review_disagreement policy_id=POL-2025-007 fields=['deductible']
+2026-09-24 17:16:25,740 INFO HTTP Request: POST https://claude.vocareum.com/v1/messages "HTTP/1.1 200 OK"
+2026-09-24 17:16:30,995 INFO HTTP Request: POST https://claude.vocareum.com/v1/messages "HTTP/1.1 200 OK"
+2026-09-24 17:16:31,000 INFO review_disagreement policy_id=POL-2025-008 fields=['policy_type']
+2026-09-24 17:16:33,753 INFO HTTP Request: POST https://claude.vocareum.com/v1/messages "HTTP/1.1 200 OK"
+2026-09-24 17:16:33,755 INFO validation_failed
+2026-09-24 17:16:36,559 INFO HTTP Request: POST https://claude.vocareum.com/v1/messages "HTTP/1.1 200 OK"
+2026-09-24 17:16:36,560 INFO validation_failed
+2026-09-24 17:16:40,115 INFO HTTP Request: POST https://claude.vocareum.com/v1/messages "HTTP/1.1 200 OK"
+2026-09-24 17:16:45,403 INFO HTTP Request: POST https://claude.vocareum.com/v1/messages "HTTP/1.1 200 OK"
+2026-09-24 17:16:45,405 INFO review_disagreement policy_id=POL-2025-010 fields=['premium_amount']
+{
+  "decisions_written": 9,
+  "auto_approve": 0,
+  "human_review": 9,
+  "spot_check": 0,
+  "escalations": 1,
+  "pattern_summary": {
+    "endorsements_absent": {
+      "count": 1,
+      "policies": [
+        "POL-2025-009"
+      ],
+      "categories": [
+        "missing_source"
+      ]
+    },
+    "premium_does_not_match_components": {
+      "count": 1,
+      "policies": [
+        "POL-2025-010"
+      ],
+      "categories": [
+        "consistency"
+      ]
+    }
+  },
+  "output_path": "routing_decisions.json"
+}

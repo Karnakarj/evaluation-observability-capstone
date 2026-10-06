@@ -1,0 +1,13 @@
+9c9
+<       "value": 95,
+---
+>       "value": 78,
+11c11
+<       "statement": "During Q1 2026, Meridian Components achieved an on-time delivery rate of 95% across all customer purchase orders, consistent with our internal service-level commitments."
+---
+>       "statement": "During Q1 2026, Meridian Components achieved an on-time delivery rate of 78% across all customer purchase orders, consistent with our internal service-level commitments."
+28c28
+< }
+---
+> }
+\ No newline at end of file

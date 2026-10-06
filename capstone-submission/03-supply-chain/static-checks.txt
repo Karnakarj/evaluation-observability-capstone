@@ -1,0 +1,15 @@
+# NOTE: pyproject.toml pins [tool.mypy] python_version = "3.11", but this workspace runs Python 3.13.0
+# with numpy 2.5.3, whose stubs use 3.12+ syntax. The first run below fails inside numpy/__init__.pyi,
+# not in project code. Re-run targets the interpreter actually in use (CLI flag only; no project file changed).
+
+## First run (as configured)
+$ mypy supply_chain_risk/
+.venv/lib/python3.13/site-packages/numpy/__init__.pyi:737: error: Type statement is only supported in Python 3.12 and greater  [syntax]
+Found 1 error in 1 file (errors prevented further checking)
+
+$ ruff check supply_chain_risk/ tests/
+All checks passed!
+
+## Re-run: mypy --python-version 3.13 supply_chain_risk/
+$ mypy --python-version 3.13 supply_chain_risk/
+Success: no issues found in 8 source files

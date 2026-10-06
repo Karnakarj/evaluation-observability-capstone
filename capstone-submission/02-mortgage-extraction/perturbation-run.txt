@@ -1,0 +1,20 @@
+== A. UNPERTURBED - stated total as printed on the paystub
+   line-item sum : 9642.17
+   stated total  : 10892.17
+   report        : {"consistent":false,"discrepancies":[{"field":"total_monthly_income","calculated":9642.17,"stated":10892.17,"delta":-1250.0}]}
+
+== B. PERTURBED - stated total edited to the line-item sum
+   line-item sum : 9642.17
+   stated total  : 9642.17
+   report        : {"consistent":true,"discrepancies":[]}
+
+== C. PERTURBED - stated total off by $0.50 (inside tolerance)
+   line-item sum : 9642.17
+   stated total  : 9642.67
+   report        : {"consistent":true,"discrepancies":[]}
+
+== D. PERTURBED - stated total off by $1.50 (outside tolerance)
+   line-item sum : 9642.17
+   stated total  : 9643.67
+   report        : {"consistent":false,"discrepancies":[{"field":"total_monthly_income","calculated":9642.17,"stated":9643.67,"delta":-1.5}]}
+

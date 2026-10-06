@@ -1,0 +1,3 @@
+$ ruff check mortgage_extractor/ tests/
+All checks passed!
+
